@@ -1,0 +1,11 @@
+docker build -f Dockerfile -t minecraft:1.14.4 .
+docker run -d -e RAM=512 -v C:/laragon/var/minecraft:/data --name minecraft minecraft:1.14.4
+docker run -d -e RAM=512 --name mc minecraft:1.14.4
+
+docker run -d \
+	-e RAM=512 \
+	-p 25565:25565 \
+	-v /var/minecraft/containers/daxescraft/world/:/data/world/ \
+	-v /var/minecraft/containers/daxescraft/server.properties:/data/server.properties \
+	-v /var/minecraft/containers/daxescraft/resources:/data/resources \
+	--name daxescraft laurencehr/minecraft:1.14.4
