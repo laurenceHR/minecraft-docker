@@ -57,7 +57,7 @@ sudo docker start dxscraft
 Puedes crear tu propia imagen docker
 
 ```bash
-docker build -f Dockerfile-152 -t minecraft:1.15.2
+docker build -f Dockerfile-201 -t minecraft-server:1.20.1 .
 ```
 
 
